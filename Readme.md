@@ -12,6 +12,45 @@ This is a learning and prototype project, but it follows a realistic pattern:
 
 ---
 
+## Build and run
+
+Compile the project directly with a C++98-compatible compiler from the project root:
+
+```cmd
+cd /d "C:\Users\Harshit Shrivastava\Desktop\projects\simulated-registry"
+g++ -std=c++98 -Iinclude -o afdx_ui_poc.exe src\main.cpp src\simulator\SimulatedAFDXReceiver.cpp src\shared_memory\SharedMemory.cpp src\parser\CommandParser.cpp src\parser\CommandRegistry.cpp src\runtime\RuntimeEngine.cpp src\variables\Variable.cpp src\variables\VariableStore.cpp
+```
+
+Run the application:
+
+```cmd
+.\afdx_ui_poc.exe config\runtime_config.txt
+```
+
+Or run it with the default working directory set to the project root:
+
+```cmd
+cd /d "C:\Users\Harshit Shrivastava\Desktop\projects\simulated-registry"
+.\afdx_ui_poc.exe
+```
+
+This project is written for C++98 and uses the headers in the `include` folder.
+
+### Current version
+
+Verified working build/run command on this machine:
+
+```cmd
+cd /d "C:\Users\Harshit Shrivastava\Desktop\projects\simulated-registry"
+$env:Path += ";C:\mingw64\mingw64\bin"
+g++ -std=c++98 -Iinclude -o afdx_ui_poc.exe src\main.cpp src\simulator\SimulatedAFDXReceiver.cpp src\shared_memory\SharedMemory.cpp src\parser\CommandParser.cpp src\parser\CommandRegistry.cpp src\runtime\RuntimeEngine.cpp src\variables\Variable.cpp src\variables\VariableStore.cpp
+.\afdx_ui_poc.exe config\runtime_config.txt
+```
+
+Status: working and tested with exit code 0.
+
+---
+
 ## What the project does
 
 The program reads a configuration file, creates a `VariableStore`, registers commands, simulates incoming runtime messages, parses each command, and executes the resulting actions.
@@ -223,42 +262,37 @@ This simulates a realistic UI/runtime event flow:
 
 ## Build steps
 
+This project requires CMake to be installed and available in your PATH.
+
+On Windows, if `winget` is not available, install CMake from the official website and reopen the terminal before continuing.
+
 From the project root, run:
 
 ```powershell
-$env:Path = "C:\mingw64\mingw64\bin;" + $env:Path
-cd "C:\Users\Harshit Shrivastava\Desktop\projects\AFDX-UI-Framework"
-cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_C_COMPILER="C:\mingw64\mingw64\bin\gcc.exe" -DCMAKE_CXX_COMPILER="C:\mingw64\mingw64\bin\g++.exe"
-cmake --build build
+cd "C:\Users\Harshit Shrivastava\Desktop\projects\simulated-registry"
+cmake -S . -B build
+cmake --build build --target afdx_ui_poc
 ```
 
-This generates the build artifacts under the `build` directory.
+This creates the build output inside the `build` folder.
+
+> If PowerShell says `cmake is not recognized`, CMake is not installed or not on PATH. Install it first and then run the commands again.
 
 ---
 
 ## Run the app
 
-After building, run the generated binary with the config file:
-
-in
-in? 
-```
-
-In this project, the real binary is the generated `afdx_ui_poc.exe` in the CMake build tree. The reliable way to run it is to list the build folder and launch the actual generated executable.
-
-Example:
+After the build succeeds, run the generated executable:
 
 ```powershell
-Get-ChildItem .\uild\<generated-binary-name>.exe .\config\runtime_config.txt
+.\build\afdx_ui_poc.exe
 ```
 
-In the verified workspace run, the app was executed successfully with:
+The application uses the default config file at `config/runtime_config.txt` unless you pass another file path:
 
-in
-in? .\config\runtime_config.txt
+```powershell
+.\build\afdx_ui_poc.exe "config/runtime_config.txt"
 ```
-
-If your generated binary is visible in the build tree, use that exact path instead.
 
 ---
 
@@ -311,12 +345,14 @@ message -> parser -> runtime engine -> variable update -> observer notification
 
 ## Current status
 
-The project has been validated with a fresh build and test run.
+This project is set up for a normal CMake build, but this machine currently reports that CMake is not installed or not available on PATH.
 
-Verified result:
+When CMake is installed successfully, the expected commands are:
 
-```text
-100% tests passed, 0 tests failed out of 3
+```powershell
+cmake -S . -B build
+cmake --build build --target afdx_ui_poc
+.\build\afdx_ui_poc.exe
 ```
 
 ---

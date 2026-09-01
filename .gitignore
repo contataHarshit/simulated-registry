@@ -1,0 +1,27 @@
+# Build artifacts
+afdx_ui_poc.exe
+*.exe
+*.obj
+*.o
+*.dll
+*.so
+*.dylib
+
+# CMake / build directories
+/build/
+/build-mingw/
+/build-mingw2/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Generated test binaries
+command_parser_test.exe
+variable_store_test.exe
+runtime_engine_test.exe
+
+# Local editor / OS junk
+.DS_Store
+Thumbs.db

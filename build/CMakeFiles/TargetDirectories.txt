@@ -1,0 +1,7 @@
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/afdx_ui_poc.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/command_parser_test.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/variable_store_test.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/runtime_engine_test.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/test.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/edit_cache.dir
+C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,64 @@
+Start testing: Sep 01 03:29 India Standard Time
+----------------------------------------------------------
+1/3 Testing: command_parser_test
+1/3 Test: command_parser_test
+Command: "C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/command_parser_test.exe"
+Directory: C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build
+"command_parser_test" start time: Sep 01 03:29 India Standard Time
+Output:
+----------------------------------------------------------
+PASS: UPDATE_VARIABLE
+PASS: configured command alias
+PASS: family-based inheritance
+PASS: OPEN_PAGE
+PASS: EXECUTE
+PASS: SHOW_MESSAGE
+PASS: INVALID_COMMAND
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"command_parser_test" end time: Sep 01 03:29 India Standard Time
+"command_parser_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: variable_store_test
+2/3 Test: variable_store_test
+Command: "C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/variable_store_test.exe"
+Directory: C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build
+"variable_store_test" start time: Sep 01 03:29 India Standard Time
+Output:
+----------------------------------------------------------
+PASS: declareVariable
+Observer received: engineMode = AUTO
+PASS: setVariable
+PASS: getVariable
+PASS: observer
+[VariableStore] Variable not found: doesNotExist
+PASS: unknown variable handling
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"variable_store_test" end time: Sep 01 03:29 India Standard Time
+"variable_store_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: runtime_engine_test
+3/3 Test: runtime_engine_test
+Command: "C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build/runtime_engine_test.exe"
+Directory: C:/Users/Harshit Shrivastava/Desktop/projects/AFDX-UI-Framework/build
+"runtime_engine_test" start time: Sep 01 03:29 India Standard Time
+Output:
+----------------------------------------------------------
+[RuntimeEngine] Updating variable: engineMode = AUTO
+PASS: RuntimeEngine
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"runtime_engine_test" end time: Sep 01 03:29 India Standard Time
+"runtime_engine_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 01 03:29 India Standard Time

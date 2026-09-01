@@ -1,0 +1,17 @@
+# Variable declarations: variable <id> <string|int|double|bool>
+variable pilotName string
+variable engineMode string
+variable engineRPM int
+
+# Command aliases: command <new-name> <existing-command>
+command START_ENGINE EXECUTE
+command GO_TO_CONFIGURATION OPEN_PAGE
+command SET_ENGINE_MODE UPDATE_VARIABLE
+command ALERT SHOW_MESSAGE
+
+# Simulator input: message <runtime command and arguments>
+message SET_ENGINE_MODE engineMode AUTO
+message SET_ENGINE_MODE pilotName Harshit
+message ALERT Engine started
+message GO_TO_CONFIGURATION Configuration
+message START_ENGINE SAVE_CONFIGURATION

@@ -1,0 +1,27 @@
+# Variable declarations: variable <id> <string|int|double|bool>
+variable pilotName string
+variable engineMode string
+variable engineRPM int
+
+# Predefined command families
+# family <family-name> <base-command>
+family ACTION EXECUTE
+family NAVIGATION OPEN_PAGE
+family NOTIFICATION SHOW_MESSAGE
+family STATE UPDATE_VARIABLE
+
+# Derived commands inheriting from command families
+# command <new-command> <parent-family-or-command>
+command START_ENGINE ACTION
+command GO_TO_CONFIGURATION NAVIGATION
+command SET_ENGINE_MODE STATE
+command ALERT NOTIFICATION
+command RESTART_ENGINE ACTION
+
+# Simulator input: message <runtime command and arguments>
+message SET_ENGINE_MODE engineMode AUTO
+message SET_ENGINE_MODE pilotName Harshit
+message RESTART_ENGINE SAVE_CONFIGURATION
+message ALERT Engine started
+message GO_TO_CONFIGURATION Configuration
+message START_ENGINE SAVE_CONFIGURATION
